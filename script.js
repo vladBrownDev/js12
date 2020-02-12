@@ -63,8 +63,8 @@ function deepClone(obj) {
 
         }
         else if(typeof obj[key] === "object") {
-            copyObj[key] = obj[key]
-            deepClone(obj[key])
+            copyObj[key] = deepClone(obj[key])
+            
         }
         
         else {
